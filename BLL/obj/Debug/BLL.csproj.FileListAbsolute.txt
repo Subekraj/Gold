@@ -1,0 +1,21 @@
+C:\Users\Utshab Luitel\Desktop\GidHub\Jewellery management system\BLL\bin\Debug\BLL.dll
+C:\Users\Utshab Luitel\Desktop\GidHub\Jewellery management system\BLL\bin\Debug\BLL.pdb
+C:\Users\Utshab Luitel\Desktop\GidHub\Jewellery management system\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Utshab Luitel\Desktop\GidHub\Jewellery management system\BLL\obj\Debug\BLL.dll
+C:\Users\Utshab Luitel\Desktop\GidHub\Jewellery management system\BLL\obj\Debug\BLL.pdb
+C:\Users\Utshab Luitel\Desktop\GidHub\Jewellery management system\BLL\bin\Debug\DAL.dll
+C:\Users\Utshab Luitel\Desktop\GidHub\Jewellery management system\BLL\bin\Debug\DAL.pdb
+C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\BLL\bin\Debug\BLL.dll
+C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\BLL\bin\Debug\BLL.pdb
+C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\BLL\bin\Debug\DAL.dll
+C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\BLL\bin\Debug\DAL.pdb
+C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\BLL\obj\Debug\BLL.dll
+C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\BLL\obj\Debug\BLL.pdb
+C:\Users\Utshab Luitel\Desktop\GOld\New folder\BLL\bin\Debug\BLL.dll
+C:\Users\Utshab Luitel\Desktop\GOld\New folder\BLL\bin\Debug\BLL.pdb
+C:\Users\Utshab Luitel\Desktop\GOld\New folder\BLL\bin\Debug\DAL.dll
+C:\Users\Utshab Luitel\Desktop\GOld\New folder\BLL\bin\Debug\DAL.pdb
+C:\Users\Utshab Luitel\Desktop\GOld\New folder\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Utshab Luitel\Desktop\GOld\New folder\BLL\obj\Debug\BLL.dll
+C:\Users\Utshab Luitel\Desktop\GOld\New folder\BLL\obj\Debug\BLL.pdb

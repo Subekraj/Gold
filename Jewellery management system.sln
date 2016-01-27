@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jewellery management system", "Jewellery management system\Jewellery management system.csproj", "{6F68D9F0-2996-4BCB-9A86-45FD13BE5AA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{6A8DA9EE-0EB3-47DC-82BD-F634C253F11E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{9AC954C5-9EDD-4011-AA7C-A9DD62FDF2FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F68D9F0-2996-4BCB-9A86-45FD13BE5AA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F68D9F0-2996-4BCB-9A86-45FD13BE5AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F68D9F0-2996-4BCB-9A86-45FD13BE5AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F68D9F0-2996-4BCB-9A86-45FD13BE5AA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A8DA9EE-0EB3-47DC-82BD-F634C253F11E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A8DA9EE-0EB3-47DC-82BD-F634C253F11E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A8DA9EE-0EB3-47DC-82BD-F634C253F11E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A8DA9EE-0EB3-47DC-82BD-F634C253F11E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AC954C5-9EDD-4011-AA7C-A9DD62FDF2FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AC954C5-9EDD-4011-AA7C-A9DD62FDF2FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AC954C5-9EDD-4011-AA7C-A9DD62FDF2FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AC954C5-9EDD-4011-AA7C-A9DD62FDF2FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
