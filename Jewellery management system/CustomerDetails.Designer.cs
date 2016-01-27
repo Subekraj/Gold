@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cbo_customerId = new System.Windows.Forms.ComboBox();
-            this.lbl_CustomerId = new System.Windows.Forms.Label();
             this.lbl_newCustomerId = new System.Windows.Forms.Label();
             this.txt_newCustomerID = new System.Windows.Forms.TextBox();
             this.lbl_title = new System.Windows.Forms.Label();
@@ -70,32 +68,28 @@
             this.label10 = new System.Windows.Forms.Label();
             this.cusdetails = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.customerData = new System.Windows.Forms.DataGridView();
+            this.dgv_customerdetails = new System.Windows.Forms.DataGridView();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.calid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caltitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calspouse = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caladress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calcity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calbthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calanniversary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calphone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calmobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calfax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calemail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_customerdetails)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cbo_customerId
-            // 
-            this.cbo_customerId.FormattingEnabled = true;
-            this.cbo_customerId.Location = new System.Drawing.Point(130, 32);
-            this.cbo_customerId.Name = "cbo_customerId";
-            this.cbo_customerId.Size = new System.Drawing.Size(121, 21);
-            this.cbo_customerId.TabIndex = 0;
-            // 
-            // lbl_CustomerId
-            // 
-            this.lbl_CustomerId.AutoSize = true;
-            this.lbl_CustomerId.Location = new System.Drawing.Point(56, 37);
-            this.lbl_CustomerId.Name = "lbl_CustomerId";
-            this.lbl_CustomerId.Size = new System.Drawing.Size(59, 13);
-            this.lbl_CustomerId.TabIndex = 1;
-            this.lbl_CustomerId.Text = "customerId";
             // 
             // lbl_newCustomerId
             // 
             this.lbl_newCustomerId.AutoSize = true;
-            this.lbl_newCustomerId.Location = new System.Drawing.Point(313, 37);
+            this.lbl_newCustomerId.Location = new System.Drawing.Point(65, 42);
             this.lbl_newCustomerId.Name = "lbl_newCustomerId";
             this.lbl_newCustomerId.Size = new System.Drawing.Size(88, 13);
             this.lbl_newCustomerId.TabIndex = 2;
@@ -103,7 +97,7 @@
             // 
             // txt_newCustomerID
             // 
-            this.txt_newCustomerID.Location = new System.Drawing.Point(416, 34);
+            this.txt_newCustomerID.Location = new System.Drawing.Point(168, 39);
             this.txt_newCustomerID.Name = "txt_newCustomerID";
             this.txt_newCustomerID.Size = new System.Drawing.Size(100, 20);
             this.txt_newCustomerID.TabIndex = 3;
@@ -182,7 +176,7 @@
             // lbl_birthdate
             // 
             this.lbl_birthdate.AutoSize = true;
-            this.lbl_birthdate.Location = new System.Drawing.Point(477, 110);
+            this.lbl_birthdate.Location = new System.Drawing.Point(476, 101);
             this.lbl_birthdate.Name = "lbl_birthdate";
             this.lbl_birthdate.Size = new System.Drawing.Size(52, 13);
             this.lbl_birthdate.TabIndex = 8;
@@ -190,14 +184,14 @@
             // 
             // dtp_birthdate
             // 
-            this.dtp_birthdate.Location = new System.Drawing.Point(546, 104);
+            this.dtp_birthdate.Location = new System.Drawing.Point(545, 95);
             this.dtp_birthdate.Name = "dtp_birthdate";
             this.dtp_birthdate.Size = new System.Drawing.Size(270, 20);
             this.dtp_birthdate.TabIndex = 9;
             // 
             // dtp_anniversary
             // 
-            this.dtp_anniversary.Location = new System.Drawing.Point(546, 128);
+            this.dtp_anniversary.Location = new System.Drawing.Point(545, 119);
             this.dtp_anniversary.Name = "dtp_anniversary";
             this.dtp_anniversary.Size = new System.Drawing.Size(270, 20);
             this.dtp_anniversary.TabIndex = 11;
@@ -205,7 +199,7 @@
             // lbl_anniversary
             // 
             this.lbl_anniversary.AutoSize = true;
-            this.lbl_anniversary.Location = new System.Drawing.Point(467, 131);
+            this.lbl_anniversary.Location = new System.Drawing.Point(466, 122);
             this.lbl_anniversary.Name = "lbl_anniversary";
             this.lbl_anniversary.Size = new System.Drawing.Size(62, 13);
             this.lbl_anniversary.TabIndex = 10;
@@ -213,7 +207,7 @@
             // 
             // txt_phone
             // 
-            this.txt_phone.Location = new System.Drawing.Point(546, 150);
+            this.txt_phone.Location = new System.Drawing.Point(545, 141);
             this.txt_phone.Name = "txt_phone";
             this.txt_phone.Size = new System.Drawing.Size(270, 20);
             this.txt_phone.TabIndex = 13;
@@ -221,7 +215,7 @@
             // lbl_phone
             // 
             this.lbl_phone.AutoSize = true;
-            this.lbl_phone.Location = new System.Drawing.Point(492, 149);
+            this.lbl_phone.Location = new System.Drawing.Point(491, 140);
             this.lbl_phone.Name = "lbl_phone";
             this.lbl_phone.Size = new System.Drawing.Size(37, 13);
             this.lbl_phone.TabIndex = 12;
@@ -229,7 +223,7 @@
             // 
             // txt_mobile
             // 
-            this.txt_mobile.Location = new System.Drawing.Point(546, 172);
+            this.txt_mobile.Location = new System.Drawing.Point(545, 163);
             this.txt_mobile.Name = "txt_mobile";
             this.txt_mobile.Size = new System.Drawing.Size(270, 20);
             this.txt_mobile.TabIndex = 15;
@@ -237,7 +231,7 @@
             // lbl_mobile
             // 
             this.lbl_mobile.AutoSize = true;
-            this.lbl_mobile.Location = new System.Drawing.Point(492, 178);
+            this.lbl_mobile.Location = new System.Drawing.Point(491, 169);
             this.lbl_mobile.Name = "lbl_mobile";
             this.lbl_mobile.Size = new System.Drawing.Size(37, 13);
             this.lbl_mobile.TabIndex = 14;
@@ -245,7 +239,7 @@
             // 
             // txt_fax
             // 
-            this.txt_fax.Location = new System.Drawing.Point(546, 195);
+            this.txt_fax.Location = new System.Drawing.Point(545, 186);
             this.txt_fax.Name = "txt_fax";
             this.txt_fax.Size = new System.Drawing.Size(270, 20);
             this.txt_fax.TabIndex = 17;
@@ -253,7 +247,7 @@
             // lbl_fax
             // 
             this.lbl_fax.AutoSize = true;
-            this.lbl_fax.Location = new System.Drawing.Point(505, 193);
+            this.lbl_fax.Location = new System.Drawing.Point(504, 189);
             this.lbl_fax.Name = "lbl_fax";
             this.lbl_fax.Size = new System.Drawing.Size(24, 13);
             this.lbl_fax.TabIndex = 16;
@@ -311,7 +305,7 @@
             // lbl_email
             // 
             this.lbl_email.AutoSize = true;
-            this.lbl_email.Location = new System.Drawing.Point(505, 217);
+            this.lbl_email.Location = new System.Drawing.Point(504, 208);
             this.lbl_email.Name = "lbl_email";
             this.lbl_email.Size = new System.Drawing.Size(32, 13);
             this.lbl_email.TabIndex = 16;
@@ -319,7 +313,7 @@
             // 
             // txt_email
             // 
-            this.txt_email.Location = new System.Drawing.Point(546, 218);
+            this.txt_email.Location = new System.Drawing.Point(545, 209);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(270, 20);
             this.txt_email.TabIndex = 17;
@@ -434,30 +428,125 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.customerData);
+            this.panel1.Controls.Add(this.dgv_customerdetails);
             this.panel1.Location = new System.Drawing.Point(21, 264);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(875, 196);
             this.panel1.TabIndex = 21;
             // 
-            // customerData
+            // dgv_customerdetails
             // 
-            this.customerData.AllowUserToAddRows = false;
-            this.customerData.AllowUserToDeleteRows = false;
-            this.customerData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.customerData.Location = new System.Drawing.Point(3, 3);
-            this.customerData.Name = "customerData";
-            this.customerData.ReadOnly = true;
-            this.customerData.Size = new System.Drawing.Size(866, 190);
-            this.customerData.TabIndex = 0;
-            this.customerData.ColumnHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.customerData_ColumnHeaderMouseDoubleClick);
-            this.customerData.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.customerData_RowHeaderMouseDoubleClick);
+            this.dgv_customerdetails.AllowUserToAddRows = false;
+            this.dgv_customerdetails.AllowUserToDeleteRows = false;
+            this.dgv_customerdetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_customerdetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.calid,
+            this.caltitle,
+            this.calname,
+            this.calspouse,
+            this.caladress,
+            this.calcity,
+            this.calbthdate,
+            this.calanniversary,
+            this.calphone,
+            this.calmobile,
+            this.calfax,
+            this.calemail});
+            this.dgv_customerdetails.Location = new System.Drawing.Point(3, 3);
+            this.dgv_customerdetails.Name = "dgv_customerdetails";
+            this.dgv_customerdetails.ReadOnly = true;
+            this.dgv_customerdetails.Size = new System.Drawing.Size(866, 190);
+            this.dgv_customerdetails.TabIndex = 0;
+            this.dgv_customerdetails.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.customerData_RowHeaderMouseDoubleClick);
+            // 
+            // btn_add
+            // 
+            this.btn_add.Location = new System.Drawing.Point(721, 230);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(94, 23);
+            this.btn_add.TabIndex = 22;
+            this.btn_add.Text = "Add";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
+            // calid
+            // 
+            this.calid.HeaderText = "Customer Id";
+            this.calid.Name = "calid";
+            this.calid.ReadOnly = true;
+            // 
+            // caltitle
+            // 
+            this.caltitle.HeaderText = "Title";
+            this.caltitle.Name = "caltitle";
+            this.caltitle.ReadOnly = true;
+            // 
+            // calname
+            // 
+            this.calname.HeaderText = "Name";
+            this.calname.Name = "calname";
+            this.calname.ReadOnly = true;
+            // 
+            // calspouse
+            // 
+            this.calspouse.HeaderText = "Spouse";
+            this.calspouse.Name = "calspouse";
+            this.calspouse.ReadOnly = true;
+            // 
+            // caladress
+            // 
+            this.caladress.HeaderText = "Adress";
+            this.caladress.Name = "caladress";
+            this.caladress.ReadOnly = true;
+            // 
+            // calcity
+            // 
+            this.calcity.HeaderText = "City";
+            this.calcity.Name = "calcity";
+            this.calcity.ReadOnly = true;
+            // 
+            // calbthdate
+            // 
+            this.calbthdate.HeaderText = "Birth Date";
+            this.calbthdate.Name = "calbthdate";
+            this.calbthdate.ReadOnly = true;
+            // 
+            // calanniversary
+            // 
+            this.calanniversary.HeaderText = "Anniversary";
+            this.calanniversary.Name = "calanniversary";
+            this.calanniversary.ReadOnly = true;
+            // 
+            // calphone
+            // 
+            this.calphone.HeaderText = "Phone";
+            this.calphone.Name = "calphone";
+            this.calphone.ReadOnly = true;
+            // 
+            // calmobile
+            // 
+            this.calmobile.HeaderText = "Mobile";
+            this.calmobile.Name = "calmobile";
+            this.calmobile.ReadOnly = true;
+            // 
+            // calfax
+            // 
+            this.calfax.HeaderText = "Fax No.";
+            this.calfax.Name = "calfax";
+            this.calfax.ReadOnly = true;
+            // 
+            // calemail
+            // 
+            this.calemail.HeaderText = "Email";
+            this.calemail.Name = "calemail";
+            this.calemail.ReadOnly = true;
             // 
             // CustomerDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(908, 505);
+            this.Controls.Add(this.btn_add);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cusdetails);
             this.Controls.Add(this.label10);
@@ -496,24 +585,19 @@
             this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.txt_newCustomerID);
             this.Controls.Add(this.lbl_newCustomerId);
-            this.Controls.Add(this.lbl_CustomerId);
             this.Controls.Add(this.cbo_name);
             this.Controls.Add(this.cbo_title);
-            this.Controls.Add(this.cbo_customerId);
             this.Name = "CustomerDetails";
             this.Text = "CustomerDetails";
             this.Load += new System.EventHandler(this.CustomerDetails_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.customerData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_customerdetails)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cbo_customerId;
-        private System.Windows.Forms.Label lbl_CustomerId;
         private System.Windows.Forms.Label lbl_newCustomerId;
         private System.Windows.Forms.TextBox txt_newCustomerID;
         private System.Windows.Forms.Label lbl_title;
@@ -554,6 +638,19 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label cusdetails;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView customerData;
+        private System.Windows.Forms.DataGridView dgv_customerdetails;
+        private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caltitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calspouse;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caladress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calcity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calbthdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calanniversary;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calphone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calmobile;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calfax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calemail;
     }
 }

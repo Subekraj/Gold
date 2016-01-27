@@ -16,7 +16,28 @@ namespace Jewellery_management_system
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SellsBook());
+            Application.Run(new CustomerDetails());
+
         }
+
+        //Runng the default(floderred) Sql Services in case the services is not run automatically
+        //this code may reduce the sql exception while running the form.
+
+        //public static void StartService(string serviceName, int timeoutMilliseconds)
+        //{
+        //    ServiceController service = new ServiceController("C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Binn\sqlservr.exe");
+        //    try
+        //    {
+        //        TimeSpan timeout = TimeSpan.FromMilliseconds(timeoutMilliseconds);
+
+        //        service.Start();
+        //        service.WaitForStatus(ServiceControllerStatus.Running, timeout);
+        //    }
+        //    catch
+        //    {
+        //            }
+        //      }
+
+
     }
 }

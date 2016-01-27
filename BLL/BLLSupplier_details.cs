@@ -38,11 +38,11 @@ namespace BLL
             return DOA.IDU("insert into tbl_supplier_details values(@supplier_type ,@new_supplier_id, @title, @name,  @contact, @adress ,@phone, @mobile, @fax, @email, @city,@ecc_no, @cst_no, @division, @pan_no)", parm);
         }
 
-        public DataTable Fectching_All_Table_data()
-        {
-            DataTable dt = new DataTable();
-            return DOA.getdata("select * from tbl_supplier_details", null);
-        }
+        //public DataTable Fectching_All_Table_data()
+        //{
+        //    DataTable dt = new DataTable();
+        //    return DOA.getdata("select * from tbl_supplier_details", null);
+        //}
 
         public int UpdateIntoSupplierDetails(string supplier_type, int new_supplier_id, string title, string name, int contact, string adress, int phone, int mobile, int fax, string email, string city, int ecc_no, int cst_no, string division, int pan_no)
         {

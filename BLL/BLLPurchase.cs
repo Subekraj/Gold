@@ -38,19 +38,6 @@ namespace BLL
             return DOA.IDU("insert into tbl_purchase values(@invoice_no,@invoice_date,@item_category,@item_name,@quantity,@weight,@market_price,@cost_price,@discount,@margin_percent,@margin_discount,@sell_price,@colour,@item_code, @item_bar_code, @suppiler_bill_no,@supplier_name,@carat,@Total)", parm);
            
         }
-        public int purchasetype(int invoice_no, DateTime purchase_date,string item_name, decimal paid_amount, string purchase_type, string purchase_by)
-        {
-            SqlParameter[] parm = new SqlParameter[]
-            {
-                new SqlParameter("@invoice_no",invoice_no),
-                  new SqlParameter("@purchase_date",purchase_date),
-                    new SqlParameter("@item_name",item_name),
-                      new SqlParameter("@paid_amount",paid_amount),
-                        new SqlParameter("@purchase_type",purchase_type),
-                          new SqlParameter("@purchase_by",purchase_by)
-            };
-            return DOA.IDU("insert into tbl_purchase_by values(@invoice_no,@item_name,@paid_amount,@purchase_type,@purchase_by,@purchase_date)", parm);
-        }
         
     }
    

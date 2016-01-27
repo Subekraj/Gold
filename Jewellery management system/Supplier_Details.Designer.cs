@@ -32,9 +32,10 @@
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_reset = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
-            this.btn_update = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbo_supplier_type = new System.Windows.Forms.ComboBox();
+            this.supp_typ = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cumpulsory = new System.Windows.Forms.Label();
             this.lbl_name = new System.Windows.Forms.Label();
@@ -68,6 +69,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.temp_adress = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_add = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -83,8 +85,22 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
             this.supply_dataGridView = new System.Windows.Forms.DataGridView();
-            this.supp_typ = new System.Windows.Forms.Label();
-            this.cbo_supplier_type = new System.Windows.Forms.ComboBox();
+            this.calsupplier_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calsupplier_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calnew_supplier_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caltitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calcontact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caladress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calphone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calmobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calfax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calemail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calcity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calecc_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calcst_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caldivision = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calpan_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -105,7 +121,7 @@
             // 
             // btn_exit
             // 
-            this.btn_exit.Location = new System.Drawing.Point(852, 420);
+            this.btn_exit.Location = new System.Drawing.Point(852, 455);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(71, 26);
             this.btn_exit.TabIndex = 52;
@@ -115,37 +131,29 @@
             // 
             // btn_reset
             // 
-            this.btn_reset.Location = new System.Drawing.Point(775, 420);
+            this.btn_reset.Location = new System.Drawing.Point(775, 455);
             this.btn_reset.Name = "btn_reset";
             this.btn_reset.Size = new System.Drawing.Size(71, 26);
             this.btn_reset.TabIndex = 51;
             this.btn_reset.Text = "Reset";
             this.btn_reset.UseVisualStyleBackColor = true;
+            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(698, 420);
+            this.btn_delete.Location = new System.Drawing.Point(698, 455);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(71, 26);
             this.btn_delete.TabIndex = 50;
             this.btn_delete.Text = "Delete";
             this.btn_delete.UseVisualStyleBackColor = true;
             // 
-            // btn_update
-            // 
-            this.btn_update.Location = new System.Drawing.Point(621, 420);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(71, 26);
-            this.btn_update.TabIndex = 49;
-            this.btn_update.Text = "Update";
-            this.btn_update.UseVisualStyleBackColor = true;
-            // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(541, 420);
+            this.btn_save.Location = new System.Drawing.Point(621, 455);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(71, 26);
-            this.btn_save.TabIndex = 48;
+            this.btn_save.TabIndex = 0;
             this.btn_save.Text = "save";
             this.btn_save.UseVisualStyleBackColor = true;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
@@ -168,6 +176,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(837, 83);
             this.panel1.TabIndex = 66;
+            // 
+            // cbo_supplier_type
+            // 
+            this.cbo_supplier_type.FormattingEnabled = true;
+            this.cbo_supplier_type.Items.AddRange(new object[] {
+            "supplier Type 1",
+            "supplier type 2 ",
+            "supplier type 3"});
+            this.cbo_supplier_type.Location = new System.Drawing.Point(330, 13);
+            this.cbo_supplier_type.Name = "cbo_supplier_type";
+            this.cbo_supplier_type.Size = new System.Drawing.Size(121, 21);
+            this.cbo_supplier_type.TabIndex = 1;
+            // 
+            // supp_typ
+            // 
+            this.supp_typ.AutoSize = true;
+            this.supp_typ.Location = new System.Drawing.Point(251, 17);
+            this.supp_typ.Name = "supp_typ";
+            this.supp_typ.Size = new System.Drawing.Size(72, 13);
+            this.supp_typ.TabIndex = 72;
+            this.supp_typ.Text = "Supplier Type";
             // 
             // label6
             // 
@@ -210,7 +239,7 @@
             this.txt_newSupplierID.Location = new System.Drawing.Point(607, 14);
             this.txt_newSupplierID.Name = "txt_newSupplierID";
             this.txt_newSupplierID.Size = new System.Drawing.Size(100, 20);
-            this.txt_newSupplierID.TabIndex = 67;
+            this.txt_newSupplierID.TabIndex = 2;
             // 
             // lbl_newSupplierId
             // 
@@ -236,7 +265,7 @@
             this.cbo_name.Location = new System.Drawing.Point(387, 50);
             this.cbo_name.Name = "cbo_name";
             this.cbo_name.Size = new System.Drawing.Size(400, 21);
-            this.cbo_name.TabIndex = 64;
+            this.cbo_name.TabIndex = 4;
             // 
             // cbo_title
             // 
@@ -249,7 +278,7 @@
             this.cbo_title.Location = new System.Drawing.Point(101, 47);
             this.cbo_title.Name = "cbo_title";
             this.cbo_title.Size = new System.Drawing.Size(121, 21);
-            this.cbo_title.TabIndex = 63;
+            this.cbo_title.TabIndex = 3;
             // 
             // cbo_supplierId
             // 
@@ -257,7 +286,7 @@
             this.cbo_supplierId.Location = new System.Drawing.Point(101, 14);
             this.cbo_supplierId.Name = "cbo_supplierId";
             this.cbo_supplierId.Size = new System.Drawing.Size(121, 21);
-            this.cbo_supplierId.TabIndex = 62;
+            this.cbo_supplierId.TabIndex = 0;
             // 
             // panel2
             // 
@@ -356,7 +385,7 @@
             this.txt_email.Location = new System.Drawing.Point(506, 78);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(270, 20);
-            this.txt_email.TabIndex = 73;
+            this.txt_email.TabIndex = 6;
             // 
             // lbl_email
             // 
@@ -372,7 +401,7 @@
             this.txt_fax.Location = new System.Drawing.Point(506, 55);
             this.txt_fax.Name = "txt_fax";
             this.txt_fax.Size = new System.Drawing.Size(270, 20);
-            this.txt_fax.TabIndex = 72;
+            this.txt_fax.TabIndex = 5;
             // 
             // lbl_fax
             // 
@@ -388,7 +417,7 @@
             this.txt_mobile.Location = new System.Drawing.Point(506, 32);
             this.txt_mobile.Name = "txt_mobile";
             this.txt_mobile.Size = new System.Drawing.Size(270, 20);
-            this.txt_mobile.TabIndex = 69;
+            this.txt_mobile.TabIndex = 4;
             // 
             // lbl_mobile
             // 
@@ -404,7 +433,7 @@
             this.txt_phone.Location = new System.Drawing.Point(506, 10);
             this.txt_phone.Name = "txt_phone";
             this.txt_phone.Size = new System.Drawing.Size(270, 20);
-            this.txt_phone.TabIndex = 67;
+            this.txt_phone.TabIndex = 3;
             // 
             // lbl_phone
             // 
@@ -420,21 +449,21 @@
             this.txt_city.Location = new System.Drawing.Point(80, 32);
             this.txt_city.Name = "txt_city";
             this.txt_city.Size = new System.Drawing.Size(200, 20);
-            this.txt_city.TabIndex = 63;
+            this.txt_city.TabIndex = 1;
             // 
             // txt_contact
             // 
             this.txt_contact.Location = new System.Drawing.Point(80, 58);
             this.txt_contact.Name = "txt_contact";
             this.txt_contact.Size = new System.Drawing.Size(200, 20);
-            this.txt_contact.TabIndex = 65;
+            this.txt_contact.TabIndex = 2;
             // 
             // txt_adress
             // 
             this.txt_adress.Location = new System.Drawing.Point(80, 9);
             this.txt_adress.Name = "txt_adress";
             this.txt_adress.Size = new System.Drawing.Size(200, 20);
-            this.txt_adress.TabIndex = 64;
+            this.txt_adress.TabIndex = 0;
             // 
             // Contacts
             // 
@@ -465,6 +494,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btn_add);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.label18);
@@ -479,8 +509,18 @@
             this.panel3.Controls.Add(this.lbl_eccno);
             this.panel3.Location = new System.Drawing.Point(35, 250);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(875, 78);
+            this.panel3.Size = new System.Drawing.Size(900, 78);
             this.panel3.TabIndex = 68;
+            // 
+            // btn_add
+            // 
+            this.btn_add.Location = new System.Drawing.Point(817, 38);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(81, 37);
+            this.btn_add.TabIndex = 4;
+            this.btn_add.Text = "Add";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // label5
             // 
@@ -523,28 +563,28 @@
             this.txt_pan.Location = new System.Drawing.Point(80, 38);
             this.txt_pan.Name = "txt_pan";
             this.txt_pan.Size = new System.Drawing.Size(270, 20);
-            this.txt_pan.TabIndex = 77;
+            this.txt_pan.TabIndex = 1;
             // 
             // txt_division
             // 
             this.txt_division.Location = new System.Drawing.Point(513, 34);
             this.txt_division.Name = "txt_division";
             this.txt_division.Size = new System.Drawing.Size(270, 20);
-            this.txt_division.TabIndex = 79;
+            this.txt_division.TabIndex = 3;
             // 
             // txt_cst
             // 
             this.txt_cst.Location = new System.Drawing.Point(513, 5);
             this.txt_cst.Name = "txt_cst";
             this.txt_cst.Size = new System.Drawing.Size(270, 20);
-            this.txt_cst.TabIndex = 76;
+            this.txt_cst.TabIndex = 2;
             // 
             // txt_eccno
             // 
             this.txt_eccno.Location = new System.Drawing.Point(80, 12);
             this.txt_eccno.Name = "txt_eccno";
             this.txt_eccno.Size = new System.Drawing.Size(270, 20);
-            this.txt_eccno.TabIndex = 73;
+            this.txt_eccno.TabIndex = 0;
             // 
             // label14
             // 
@@ -585,7 +625,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.label22);
-            this.panel4.Location = new System.Drawing.Point(12, 392);
+            this.panel4.Location = new System.Drawing.Point(12, 437);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(222, 54);
             this.panel4.TabIndex = 69;
@@ -593,7 +633,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(3, 23);
+            this.label22.Location = new System.Drawing.Point(17, 23);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(202, 13);
             this.label22.TabIndex = 0;
@@ -604,39 +644,131 @@
             this.supply_dataGridView.AllowUserToAddRows = false;
             this.supply_dataGridView.AllowUserToDeleteRows = false;
             this.supply_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.supply_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.calsupplier_id,
+            this.calsupplier_type,
+            this.calnew_supplier_id,
+            this.caltitle,
+            this.calname,
+            this.calcontact,
+            this.caladress,
+            this.calphone,
+            this.calmobile,
+            this.calfax,
+            this.calemail,
+            this.calcity,
+            this.calecc_no,
+            this.calcst_no,
+            this.caldivision,
+            this.calpan_no});
             this.supply_dataGridView.Location = new System.Drawing.Point(35, 334);
             this.supply_dataGridView.Name = "supply_dataGridView";
             this.supply_dataGridView.ReadOnly = true;
-            this.supply_dataGridView.Size = new System.Drawing.Size(875, 78);
+            this.supply_dataGridView.Size = new System.Drawing.Size(875, 115);
             this.supply_dataGridView.TabIndex = 70;
             this.supply_dataGridView.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.supply_dataGridView_RowHeaderMouseDoubleClick);
             // 
-            // supp_typ
+            // calsupplier_id
             // 
-            this.supp_typ.AutoSize = true;
-            this.supp_typ.Location = new System.Drawing.Point(251, 17);
-            this.supp_typ.Name = "supp_typ";
-            this.supp_typ.Size = new System.Drawing.Size(72, 13);
-            this.supp_typ.TabIndex = 72;
-            this.supp_typ.Text = "Supplier Type";
+            this.calsupplier_id.HeaderText = "Supplier ID";
+            this.calsupplier_id.Name = "calsupplier_id";
+            this.calsupplier_id.ReadOnly = true;
             // 
-            // cbo_supplier_type
+            // calsupplier_type
             // 
-            this.cbo_supplier_type.FormattingEnabled = true;
-            this.cbo_supplier_type.Items.AddRange(new object[] {
-            "supplier Type 1",
-            "supplier type 2 ",
-            "supplier type 3"});
-            this.cbo_supplier_type.Location = new System.Drawing.Point(330, 13);
-            this.cbo_supplier_type.Name = "cbo_supplier_type";
-            this.cbo_supplier_type.Size = new System.Drawing.Size(121, 21);
-            this.cbo_supplier_type.TabIndex = 73;
+            this.calsupplier_type.HeaderText = "Supplier Type";
+            this.calsupplier_type.Name = "calsupplier_type";
+            this.calsupplier_type.ReadOnly = true;
+            // 
+            // calnew_supplier_id
+            // 
+            this.calnew_supplier_id.HeaderText = "New Supplier ID";
+            this.calnew_supplier_id.Name = "calnew_supplier_id";
+            this.calnew_supplier_id.ReadOnly = true;
+            // 
+            // caltitle
+            // 
+            this.caltitle.HeaderText = "Title";
+            this.caltitle.Name = "caltitle";
+            this.caltitle.ReadOnly = true;
+            // 
+            // calname
+            // 
+            this.calname.HeaderText = "Name";
+            this.calname.Name = "calname";
+            this.calname.ReadOnly = true;
+            // 
+            // calcontact
+            // 
+            this.calcontact.HeaderText = "Contact";
+            this.calcontact.Name = "calcontact";
+            this.calcontact.ReadOnly = true;
+            // 
+            // caladress
+            // 
+            this.caladress.HeaderText = "Adress";
+            this.caladress.Name = "caladress";
+            this.caladress.ReadOnly = true;
+            // 
+            // calphone
+            // 
+            this.calphone.HeaderText = "Phone";
+            this.calphone.Name = "calphone";
+            this.calphone.ReadOnly = true;
+            // 
+            // calmobile
+            // 
+            this.calmobile.HeaderText = "Mobile";
+            this.calmobile.Name = "calmobile";
+            this.calmobile.ReadOnly = true;
+            // 
+            // calfax
+            // 
+            this.calfax.HeaderText = "Fax";
+            this.calfax.Name = "calfax";
+            this.calfax.ReadOnly = true;
+            // 
+            // calemail
+            // 
+            this.calemail.HeaderText = "Email";
+            this.calemail.Name = "calemail";
+            this.calemail.ReadOnly = true;
+            // 
+            // calcity
+            // 
+            this.calcity.HeaderText = "City";
+            this.calcity.Name = "calcity";
+            this.calcity.ReadOnly = true;
+            // 
+            // calecc_no
+            // 
+            this.calecc_no.HeaderText = "ECC No";
+            this.calecc_no.Name = "calecc_no";
+            this.calecc_no.ReadOnly = true;
+            // 
+            // calcst_no
+            // 
+            this.calcst_no.HeaderText = "CST No";
+            this.calcst_no.Name = "calcst_no";
+            this.calcst_no.ReadOnly = true;
+            // 
+            // caldivision
+            // 
+            this.caldivision.HeaderText = "Division";
+            this.caldivision.Name = "caldivision";
+            this.caldivision.ReadOnly = true;
+            // 
+            // calpan_no
+            // 
+            this.calpan_no.HeaderText = "PAN No";
+            this.calpan_no.Name = "calpan_no";
+            this.calpan_no.ReadOnly = true;
             // 
             // Supplier_Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(947, 458);
+            this.ClientSize = new System.Drawing.Size(947, 493);
             this.Controls.Add(this.supply_dataGridView);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -646,7 +778,6 @@
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_reset);
             this.Controls.Add(this.btn_delete);
-            this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_save);
             this.Name = "Supplier_Details";
             this.Text = "Supplier_Details";
@@ -670,7 +801,6 @@
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Button btn_reset;
         private System.Windows.Forms.Button btn_delete;
-        private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
@@ -723,5 +853,22 @@
         private System.Windows.Forms.DataGridView supply_dataGridView;
         private System.Windows.Forms.ComboBox cbo_supplier_type;
         private System.Windows.Forms.Label supp_typ;
+        private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calsupplier_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calsupplier_type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calnew_supplier_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caltitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calcontact;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caladress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calphone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calmobile;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calfax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calemail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calcity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calecc_no;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calcst_no;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caldivision;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calpan_no;
     }
 }

@@ -25,16 +25,12 @@ C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\ob
 C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\obj\Debug\Jewellery management system.pdb
 C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\obj\Debug\Jewellery management system.csprojResolveAssemblyReference.cache
 C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\obj\Debug\Jewellery_management_system.AddCategory.resources
-C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\obj\Debug\Jewellery_management_system.AddProduct.resources
-C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\obj\Debug\Jewellery_management_system.Add_Update_Delete_Items.resources
-C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\obj\Debug\Jewellery_management_system.Add_Update_Delete_Items_update.resources
 C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\obj\Debug\Jewellery_management_system.CustomerDetails.resources
 C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\obj\Debug\Jewellery_management_system.Customer_Details_Update.resources
 C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\obj\Debug\Jewellery_management_system.EditCategory.resources
 C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\obj\Debug\Jewellery_management_system.Properties.Resources.resources
 C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\obj\Debug\Jewellery_management_system.PurchaseBook.resources
 C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\obj\Debug\Jewellery_management_system.Supplier_Details.resources
-C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\obj\Debug\Jewellery_management_system.Supplier_details_update.resources
 C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\obj\Debug\Jewellery management system.csproj.GenerateResource.Cache
 C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\bin\Debug\Jewellery management system.exe
 C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\bin\Debug\Jewellery management system.pdb
@@ -42,29 +38,13 @@ C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\bi
 C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\bin\Debug\DAL.dll
 C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\bin\Debug\BLL.pdb
 C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\bin\Debug\DAL.pdb
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\bin\Debug\Jewellery management system.exe.config
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\obj\Debug\Jewellery management system.exe
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\obj\Debug\Jewellery management system.pdb
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\obj\Debug\Jewellery management system.csprojResolveAssemblyReference.cache
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\obj\Debug\Jewellery_management_system.AddCategory.resources
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\obj\Debug\Jewellery_management_system.AddProduct.resources
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\obj\Debug\Jewellery_management_system.Add_Update_Delete_Items.resources
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\obj\Debug\Jewellery_management_system.Add_Update_Delete_Items_update.resources
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\obj\Debug\Jewellery_management_system.CustomerDetails.resources
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\obj\Debug\Jewellery_management_system.Customer_Details_Update.resources
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\obj\Debug\Jewellery_management_system.EditCategory.resources
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\obj\Debug\Jewellery_management_system.Properties.Resources.resources
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\obj\Debug\Jewellery_management_system.PurchaseBook.resources
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\obj\Debug\Jewellery_management_system.Supplier_Details.resources
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\obj\Debug\Jewellery_management_system.Supplier_details_update.resources
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\obj\Debug\Jewellery management system.csproj.GenerateResource.Cache
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\bin\Debug\Jewellery management system.exe
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\bin\Debug\Jewellery management system.pdb
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\bin\Debug\BLL.dll
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\bin\Debug\DAL.dll
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\bin\Debug\BLL.pdb
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\bin\Debug\DAL.pdb
-C:\Users\Utshab Luitel\Desktop\GOld\New folder\Jewellery management system\obj\Debug\Jewellery_management_system.SellsBook.resources
-C:\Users\Utshab Luitel\Desktop\Gold\Jewellery management system\bin\Debug\Jewellery management system.exe.config
-C:\Users\Utshab Luitel\Desktop\Gold\Jewellery management system\obj\Debug\Jewellery management system.exe
-C:\Users\Utshab Luitel\Desktop\Gold\Jewellery management system\obj\Debug\Jewellery management system.pdb
+C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\obj\Debug\Jewellery_management_system.Supplier_opening_ballance.resources
+C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\obj\Debug\Jewellery_management_system.Account_and_journal_entry.resources
+C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\obj\Debug\Jewellery_management_system.add_update.resources
+C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\obj\Debug\Jewellery_management_system.Payment_details.resources
+C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\obj\Debug\Jewellery_management_system.sms_api_test.resources
+C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\obj\Debug\Jewellery_management_system.point_reedem_details.resources
+C:\Users\SJNeyos\Desktop\New folder (2)\Jewellery\Jewellery management system\obj\Debug\Jewellery_management_system.purchase_order_booking.resources
+C:\Users\SJNeyos\Desktop\jewellery from january 27\Jewellery management system\bin\Debug\Jewellery management system.exe.config
+C:\Users\SJNeyos\Desktop\jewellery from january 27\Jewellery management system\obj\Debug\Jewellery management system.exe
+C:\Users\SJNeyos\Desktop\jewellery from january 27\Jewellery management system\obj\Debug\Jewellery management system.pdb

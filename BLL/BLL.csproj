@@ -40,15 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLLAccounts_Journal_entry.cs" />
     <Compile Include="BLLCategory.cs" />
     <Compile Include="BLLCustomerDetails.cs" />
     <Compile Include="BLLInvoice.cs" />
     <Compile Include="BLLItem.cs" />
     <Compile Include="BLLItem_Add_Update.cs" />
+    <Compile Include="BLLPayment_details.cs" />
     <Compile Include="BLLPurchase.cs" />
-    <Compile Include="BLLSell.cs" />
-    <Compile Include="BLLStock.cs" />
+    <Compile Include="BLLPurchase_order_booking.cs" />
+    <Compile Include="BllRedeem_points.cs" />
     <Compile Include="BLLSupplier_details.cs" />
+    <Compile Include="BLLSupplier_opening_balance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

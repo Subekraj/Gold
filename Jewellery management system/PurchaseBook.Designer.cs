@@ -61,10 +61,32 @@
             this.txtdiscount = new System.Windows.Forms.TextBox();
             this.txtsellingprice = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cdlinvoiceno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cdlcolour = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cdlsuppilername = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cdlinvoicedate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cdlsuppbillno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cdlitemcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cdlitembarcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cdlitemcategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cdlitemname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cdlquantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cdlmarketprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cdlcostprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cdldiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cdlmargpercent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cdlmargdiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cdlsellprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cdlcarat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cdlweight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cdltotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.Label();
             this.lblgrandtotal = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.txtpaidamount = new System.Windows.Forms.TextBox();
+            this.txtremainingamount = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.txtpurchasetype = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -78,25 +100,6 @@
             this.cbocarat = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
             this.txttotal = new System.Windows.Forms.TextBox();
-            this.cdlinvoiceno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdlinvoicedate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdlsuppilername = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdlitemcategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdlitemname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdlcolour = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdlsuppbillno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdlitemcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdlitembarcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdlquantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdlmarketprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdlcostprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdldiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdlmargpercent = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdlmargdiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdlsellprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdlcarat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdlweight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdltotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -352,7 +355,7 @@
             // 
             this.txtdiscount.Location = new System.Drawing.Point(642, 125);
             this.txtdiscount.Name = "txtdiscount";
-            this.txtdiscount.Size = new System.Drawing.Size(143, 20);
+            this.txtdiscount.Size = new System.Drawing.Size(112, 20);
             this.txtdiscount.TabIndex = 27;
             // 
             // txtsellingprice
@@ -369,14 +372,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cdlinvoiceno,
-            this.cdlinvoicedate,
-            this.cdlsuppilername,
-            this.cdlitemcategory,
-            this.cdlitemname,
             this.cdlcolour,
+            this.cdlsuppilername,
+            this.cdlinvoicedate,
             this.cdlsuppbillno,
             this.cdlitemcode,
             this.cdlitembarcode,
+            this.cdlitemcategory,
+            this.cdlitemname,
             this.cdlquantity,
             this.cdlmarketprice,
             this.cdlcostprice,
@@ -387,16 +390,143 @@
             this.cdlcarat,
             this.cdlweight,
             this.cdltotal});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 210);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 214);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(785, 130);
             this.dataGridView1.TabIndex = 36;
+            // 
+            // cdlinvoiceno
+            // 
+            this.cdlinvoiceno.HeaderText = "Inv.no";
+            this.cdlinvoiceno.Name = "cdlinvoiceno";
+            this.cdlinvoiceno.ReadOnly = true;
+            this.cdlinvoiceno.Width = 50;
+            // 
+            // cdlcolour
+            // 
+            this.cdlcolour.HeaderText = "Colour";
+            this.cdlcolour.Name = "cdlcolour";
+            this.cdlcolour.ReadOnly = true;
+            // 
+            // cdlsuppilername
+            // 
+            this.cdlsuppilername.HeaderText = "Supp.Name";
+            this.cdlsuppilername.Name = "cdlsuppilername";
+            this.cdlsuppilername.ReadOnly = true;
+            // 
+            // cdlinvoicedate
+            // 
+            this.cdlinvoicedate.HeaderText = "Inv.Date";
+            this.cdlinvoicedate.Name = "cdlinvoicedate";
+            this.cdlinvoicedate.ReadOnly = true;
+            this.cdlinvoicedate.Visible = false;
+            // 
+            // cdlsuppbillno
+            // 
+            this.cdlsuppbillno.HeaderText = "Supp.Bill.No";
+            this.cdlsuppbillno.Name = "cdlsuppbillno";
+            this.cdlsuppbillno.ReadOnly = true;
+            this.cdlsuppbillno.Width = 60;
+            // 
+            // cdlitemcode
+            // 
+            this.cdlitemcode.HeaderText = "Item Code";
+            this.cdlitemcode.Name = "cdlitemcode";
+            this.cdlitemcode.ReadOnly = true;
+            this.cdlitemcode.Width = 60;
+            // 
+            // cdlitembarcode
+            // 
+            this.cdlitembarcode.HeaderText = "Bar Code";
+            this.cdlitembarcode.Name = "cdlitembarcode";
+            this.cdlitembarcode.ReadOnly = true;
+            this.cdlitembarcode.Width = 60;
+            // 
+            // cdlitemcategory
+            // 
+            this.cdlitemcategory.HeaderText = "Category";
+            this.cdlitemcategory.Name = "cdlitemcategory";
+            this.cdlitemcategory.ReadOnly = true;
+            this.cdlitemcategory.Visible = false;
+            // 
+            // cdlitemname
+            // 
+            this.cdlitemname.HeaderText = "Item Name";
+            this.cdlitemname.Name = "cdlitemname";
+            this.cdlitemname.ReadOnly = true;
+            // 
+            // cdlquantity
+            // 
+            this.cdlquantity.HeaderText = "Qty";
+            this.cdlquantity.Name = "cdlquantity";
+            this.cdlquantity.ReadOnly = true;
+            this.cdlquantity.Width = 50;
+            // 
+            // cdlmarketprice
+            // 
+            this.cdlmarketprice.HeaderText = "MP";
+            this.cdlmarketprice.Name = "cdlmarketprice";
+            this.cdlmarketprice.ReadOnly = true;
+            this.cdlmarketprice.Width = 70;
+            // 
+            // cdlcostprice
+            // 
+            this.cdlcostprice.HeaderText = "C.P";
+            this.cdlcostprice.Name = "cdlcostprice";
+            this.cdlcostprice.ReadOnly = true;
+            this.cdlcostprice.Width = 70;
+            // 
+            // cdldiscount
+            // 
+            this.cdldiscount.HeaderText = "Discount";
+            this.cdldiscount.Name = "cdldiscount";
+            this.cdldiscount.ReadOnly = true;
+            this.cdldiscount.Width = 50;
+            // 
+            // cdlmargpercent
+            // 
+            this.cdlmargpercent.HeaderText = "Marg.%";
+            this.cdlmargpercent.Name = "cdlmargpercent";
+            this.cdlmargpercent.ReadOnly = true;
+            this.cdlmargpercent.Width = 50;
+            // 
+            // cdlmargdiscount
+            // 
+            this.cdlmargdiscount.HeaderText = "Mar.Dis";
+            this.cdlmargdiscount.Name = "cdlmargdiscount";
+            this.cdlmargdiscount.ReadOnly = true;
+            this.cdlmargdiscount.Width = 70;
+            // 
+            // cdlsellprice
+            // 
+            this.cdlsellprice.HeaderText = "S.P";
+            this.cdlsellprice.Name = "cdlsellprice";
+            this.cdlsellprice.ReadOnly = true;
+            // 
+            // cdlcarat
+            // 
+            this.cdlcarat.HeaderText = "CRT";
+            this.cdlcarat.Name = "cdlcarat";
+            this.cdlcarat.ReadOnly = true;
+            // 
+            // cdlweight
+            // 
+            this.cdlweight.HeaderText = "Weight";
+            this.cdlweight.Name = "cdlweight";
+            this.cdlweight.ReadOnly = true;
+            // 
+            // cdltotal
+            // 
+            this.cdltotal.HeaderText = "Total";
+            this.cdltotal.Name = "cdltotal";
+            this.cdltotal.ReadOnly = true;
             // 
             // Total
             // 
             this.Total.AutoSize = true;
             this.Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Total.Location = new System.Drawing.Point(640, 370);
+            this.Total.Location = new System.Drawing.Point(710, 369);
             this.Total.Name = "Total";
             this.Total.Size = new System.Drawing.Size(93, 20);
             this.Total.TabIndex = 37;
@@ -406,7 +536,7 @@
             // 
             this.lblgrandtotal.AutoSize = true;
             this.lblgrandtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblgrandtotal.Location = new System.Drawing.Point(675, 435);
+            this.lblgrandtotal.Location = new System.Drawing.Point(745, 434);
             this.lblgrandtotal.Name = "lblgrandtotal";
             this.lblgrandtotal.Size = new System.Drawing.Size(40, 20);
             this.lblgrandtotal.TabIndex = 38;
@@ -421,6 +551,15 @@
             this.label19.TabIndex = 41;
             this.label19.Text = "Paid Amount";
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(13, 441);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(94, 13);
+            this.label20.TabIndex = 42;
+            this.label20.Text = "Remaning Amount";
+            // 
             // txtpaidamount
             // 
             this.txtpaidamount.Location = new System.Drawing.Point(115, 373);
@@ -428,10 +567,26 @@
             this.txtpaidamount.Size = new System.Drawing.Size(129, 20);
             this.txtpaidamount.TabIndex = 44;
             // 
+            // txtremainingamount
+            // 
+            this.txtremainingamount.Location = new System.Drawing.Point(115, 438);
+            this.txtremainingamount.Name = "txtremainingamount";
+            this.txtremainingamount.Size = new System.Drawing.Size(129, 20);
+            this.txtremainingamount.TabIndex = 45;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(115, 399);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 33);
+            this.button1.TabIndex = 46;
+            this.button1.Text = "Calculate";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(16, 409);
+            this.label17.Location = new System.Drawing.Point(255, 375);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(79, 13);
             this.label17.TabIndex = 47;
@@ -439,7 +594,7 @@
             // 
             // txtpurchasetype
             // 
-            this.txtpurchasetype.Location = new System.Drawing.Point(115, 406);
+            this.txtpurchasetype.Location = new System.Drawing.Point(348, 371);
             this.txtpurchasetype.Name = "txtpurchasetype";
             this.txtpurchasetype.Size = new System.Drawing.Size(129, 20);
             this.txtpurchasetype.TabIndex = 48;
@@ -447,7 +602,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(16, 438);
+            this.label18.Location = new System.Drawing.Point(255, 404);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(67, 13);
             this.label18.TabIndex = 49;
@@ -455,14 +610,14 @@
             // 
             // txtpurchaseby
             // 
-            this.txtpurchaseby.Location = new System.Drawing.Point(115, 437);
+            this.txtpurchaseby.Location = new System.Drawing.Point(348, 402);
             this.txtpurchaseby.Name = "txtpurchaseby";
             this.txtpurchaseby.Size = new System.Drawing.Size(129, 20);
             this.txtpurchaseby.TabIndex = 50;
             // 
             // btnsave
             // 
-            this.btnsave.Location = new System.Drawing.Point(328, 386);
+            this.btnsave.Location = new System.Drawing.Point(498, 386);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(75, 59);
             this.btnsave.TabIndex = 51;
@@ -472,7 +627,7 @@
             // 
             // btnrefresh
             // 
-            this.btnrefresh.Location = new System.Drawing.Point(448, 387);
+            this.btnrefresh.Location = new System.Drawing.Point(618, 387);
             this.btnrefresh.Name = "btnrefresh";
             this.btnrefresh.Size = new System.Drawing.Size(75, 56);
             this.btnrefresh.TabIndex = 52;
@@ -542,113 +697,6 @@
             this.txttotal.Size = new System.Drawing.Size(127, 20);
             this.txttotal.TabIndex = 59;
             // 
-            // cdlinvoiceno
-            // 
-            this.cdlinvoiceno.HeaderText = "Inv.no";
-            this.cdlinvoiceno.Name = "cdlinvoiceno";
-            this.cdlinvoiceno.Width = 50;
-            // 
-            // cdlinvoicedate
-            // 
-            this.cdlinvoicedate.HeaderText = "Inv.Date";
-            this.cdlinvoicedate.Name = "cdlinvoicedate";
-            this.cdlinvoicedate.Visible = false;
-            // 
-            // cdlsuppilername
-            // 
-            this.cdlsuppilername.HeaderText = "Supp.Name";
-            this.cdlsuppilername.Name = "cdlsuppilername";
-            // 
-            // cdlitemcategory
-            // 
-            this.cdlitemcategory.HeaderText = "Category";
-            this.cdlitemcategory.Name = "cdlitemcategory";
-            this.cdlitemcategory.Visible = false;
-            // 
-            // cdlitemname
-            // 
-            this.cdlitemname.HeaderText = "Item Name";
-            this.cdlitemname.Name = "cdlitemname";
-            // 
-            // cdlcolour
-            // 
-            this.cdlcolour.HeaderText = "Colour";
-            this.cdlcolour.Name = "cdlcolour";
-            // 
-            // cdlsuppbillno
-            // 
-            this.cdlsuppbillno.HeaderText = "Supp.Bill.No";
-            this.cdlsuppbillno.Name = "cdlsuppbillno";
-            this.cdlsuppbillno.Width = 60;
-            // 
-            // cdlitemcode
-            // 
-            this.cdlitemcode.HeaderText = "Item Code";
-            this.cdlitemcode.Name = "cdlitemcode";
-            this.cdlitemcode.Width = 60;
-            // 
-            // cdlitembarcode
-            // 
-            this.cdlitembarcode.HeaderText = "Bar Code";
-            this.cdlitembarcode.Name = "cdlitembarcode";
-            this.cdlitembarcode.Width = 60;
-            // 
-            // cdlquantity
-            // 
-            this.cdlquantity.HeaderText = "Qty";
-            this.cdlquantity.Name = "cdlquantity";
-            this.cdlquantity.Width = 50;
-            // 
-            // cdlmarketprice
-            // 
-            this.cdlmarketprice.HeaderText = "MP";
-            this.cdlmarketprice.Name = "cdlmarketprice";
-            this.cdlmarketprice.Width = 70;
-            // 
-            // cdlcostprice
-            // 
-            this.cdlcostprice.HeaderText = "C.P";
-            this.cdlcostprice.Name = "cdlcostprice";
-            this.cdlcostprice.Width = 70;
-            // 
-            // cdldiscount
-            // 
-            this.cdldiscount.HeaderText = "Discount";
-            this.cdldiscount.Name = "cdldiscount";
-            this.cdldiscount.Width = 50;
-            // 
-            // cdlmargpercent
-            // 
-            this.cdlmargpercent.HeaderText = "Marg.%";
-            this.cdlmargpercent.Name = "cdlmargpercent";
-            this.cdlmargpercent.Width = 50;
-            // 
-            // cdlmargdiscount
-            // 
-            this.cdlmargdiscount.HeaderText = "Mar.Dis";
-            this.cdlmargdiscount.Name = "cdlmargdiscount";
-            this.cdlmargdiscount.Width = 70;
-            // 
-            // cdlsellprice
-            // 
-            this.cdlsellprice.HeaderText = "S.P";
-            this.cdlsellprice.Name = "cdlsellprice";
-            // 
-            // cdlcarat
-            // 
-            this.cdlcarat.HeaderText = "CRT";
-            this.cdlcarat.Name = "cdlcarat";
-            // 
-            // cdlweight
-            // 
-            this.cdlweight.HeaderText = "Weight";
-            this.cdlweight.Name = "cdlweight";
-            // 
-            // cdltotal
-            // 
-            this.cdltotal.HeaderText = "Total";
-            this.cdltotal.Name = "cdltotal";
-            // 
             // PurchaseBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -667,7 +715,10 @@
             this.Controls.Add(this.label18);
             this.Controls.Add(this.txtpurchasetype);
             this.Controls.Add(this.label17);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtremainingamount);
             this.Controls.Add(this.txtpaidamount);
+            this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.lblgrandtotal);
             this.Controls.Add(this.Total);
@@ -751,7 +802,10 @@
         private System.Windows.Forms.Label Total;
         private System.Windows.Forms.Label lblgrandtotal;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtpaidamount;
+        private System.Windows.Forms.TextBox txtremainingamount;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtpurchasetype;
         private System.Windows.Forms.Label label18;
@@ -766,14 +820,14 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txttotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn cdlinvoiceno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cdlinvoicedate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cdlsuppilername;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cdlitemcategory;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cdlitemname;
         private System.Windows.Forms.DataGridViewTextBoxColumn cdlcolour;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cdlsuppilername;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cdlinvoicedate;
         private System.Windows.Forms.DataGridViewTextBoxColumn cdlsuppbillno;
         private System.Windows.Forms.DataGridViewTextBoxColumn cdlitemcode;
         private System.Windows.Forms.DataGridViewTextBoxColumn cdlitembarcode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cdlitemcategory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cdlitemname;
         private System.Windows.Forms.DataGridViewTextBoxColumn cdlquantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn cdlmarketprice;
         private System.Windows.Forms.DataGridViewTextBoxColumn cdlcostprice;

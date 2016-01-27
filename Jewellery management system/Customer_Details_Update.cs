@@ -22,5 +22,20 @@ namespace Jewellery_management_system
             this.Close();
            
         }
+
+        private void Customer_Details_Update_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_reset_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            //update code
+        }
     }
 }

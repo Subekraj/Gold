@@ -34,8 +34,24 @@ namespace Jewellery_management_system
                 MessageBox.Show("type numbers in required fields");
             }
             else {
-                int InsertValuetoCustomerDetailsTable = cusdetail.InsertIntoCustomersDetails(Convert.ToInt32(txt_newCustomerID.Text), cbo_title.Text, cbo_name.Text, txt_spouse.Text, txt_adress.Text, Convert.ToDateTime(dtp_birthdate.Text), Convert.ToDateTime(dtp_anniversary.Text), Convert.ToInt32(txt_phone.Text), Convert.ToInt32(txt_mobile.Text), Convert.ToInt32(txt_fax.Text), txt_email.Text, txt_city.Text);
-                if (InsertValuetoCustomerDetailsTable>0) {
+
+               int cbo_customerId_pass = Convert.ToInt32(dgv_customerdetails.CurrentRow.Cells[0].Value);
+                string cbo_title_pass = dgv_customerdetails.CurrentRow.Cells[1].Value.ToString();
+            
+               string cbo_name_pass = dgv_customerdetails.CurrentRow.Cells[2].Value.ToString();
+               string txt_spouse_pass = dgv_customerdetails.CurrentRow.Cells[3].Value.ToString();
+                string txt_adress_pass = dgv_customerdetails.CurrentRow.Cells[4].Value.ToString();
+                string txt_city_pass = dgv_customerdetails.CurrentRow.Cells[5].Value.ToString();
+                DateTime dtp_birthdate_pass = Convert.ToDateTime(dgv_customerdetails.CurrentRow.Cells[6].Value);
+                DateTime dtp_anniversary_pass = Convert.ToDateTime(dgv_customerdetails.CurrentRow.Cells[7].Value);
+                int txt_phone_pass = Convert.ToInt32(dgv_customerdetails.CurrentRow.Cells[8].Value);
+                int txt_mobile_pass = Convert.ToInt32(dgv_customerdetails.CurrentRow.Cells[9].Value);
+                int txt_fax_pass = Convert.ToInt32(dgv_customerdetails.CurrentRow.Cells[10].Value);
+                string txt_email_pass = dgv_customerdetails.CurrentRow.Cells[11].Value.ToString();
+
+                int InsertValuetoCustomerDetailsTable = cusdetail.InsertIntoCustomersDetails(cbo_customerId_pass,cbo_title_pass,cbo_name_pass,txt_spouse_pass,txt_adress_pass,dtp_birthdate_pass,dtp_anniversary_pass,txt_phone_pass,txt_mobile_pass,txt_fax_pass,txt_email_pass,txt_city_pass);
+                if (InsertValuetoCustomerDetailsTable > 0)
+                {
                     MessageBox.Show("data inserted");
                 }
             }
@@ -43,16 +59,7 @@ namespace Jewellery_management_system
 
         private void CustomerDetails_Load(object sender, EventArgs e)
         {
-            DataTable dt = cusdetail.Fectching_All_Table_data();
-            if (dt.Rows.Count > 0)
-            {
-                customerData.DataSource = dt;
-            }
-            else
-            {
-                MessageBox.Show("cant load gridview");
-
-            }
+          
 
         }
 
@@ -69,35 +76,100 @@ namespace Jewellery_management_system
             this.Close();
         }
 
-        private void customerData_ColumnHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-
-            
-        }
+     
 
         private void customerData_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            //Customer_Details_Update cdu = new Customer_Details_Update();
-            //cdu.cbo_customerId.Text = Convert.ToInt32(customerData.CurrentRow.Cells[0].Value).ToString();
-            //cdu.txt_newCustomerID.Text = customerData.CurrentRow.Cells[1].Value.ToString();
-            //cdu.cbo_title.Text = customerData.CurrentRow.Cells[2].Value.ToString();
-            //cdu.cbo_name.Text = customerData.CurrentRow.Cells[3].Value.ToString();
-            //cdu.txt_spouse.Text = customerData.CurrentRow.Cells[4].Value.ToString();
-            //cdu.txt_adress.Text = customerData.CurrentRow.Cells[5].Value.ToString();
+            Customer_Details_Update cdu = new Customer_Details_Update();
+            cdu.cbo_customerId.Text = Convert.ToInt32(dgv_customerdetails.CurrentRow.Cells[0].Value).ToString();
+            cdu.cbo_title.Text = dgv_customerdetails.CurrentRow.Cells[1].Value.ToString();
+            cdu.cbo_name.Text = dgv_customerdetails.CurrentRow.Cells[2].Value.ToString();
+            cdu.txt_spouse.Text = dgv_customerdetails.CurrentRow.Cells[4].Value.ToString();
+            cdu.txt_adress.Text = dgv_customerdetails.CurrentRow.Cells[5].Value.ToString();
 
-            //cdu.txt_phone.Text = customerData.CurrentRow.Cells[8].Value.ToString();
-            //cdu.txt_mobile.Text = customerData.CurrentRow.Cells[9].Value.ToString();
-            //cdu.txt_fax.Text = customerData.CurrentRow.Cells[10].Value.ToString();
-            //cdu.txt_email.Text = customerData.CurrentRow.Cells[11].Value.ToString();
-            //cdu.txt_city.Text = customerData.CurrentRow.Cells[12].Value.ToString();
-            //cdu.Show();
+            cdu.txt_phone.Text = dgv_customerdetails.CurrentRow.Cells[8].Value.ToString();
+            cdu.txt_mobile.Text = dgv_customerdetails.CurrentRow.Cells[9].Value.ToString();
+            cdu.txt_fax.Text = dgv_customerdetails.CurrentRow.Cells[10].Value.ToString();
+            cdu.txt_email.Text = dgv_customerdetails.CurrentRow.Cells[11].Value.ToString();
+            cdu.txt_city.Text = dgv_customerdetails.CurrentRow.Cells[12].Value.ToString();
+            cdu.Show();
 
 
         }
 
         private void btn_reset_Click(object sender, EventArgs e)
         {
-            this.Refresh();    
+            ClearallTextbox(this);
+            clearcombo(this);
+            cleardate(this);    
+        }
+        public void ClearallTextbox(Control con)
+        {
+            foreach (Control c in con.Controls)
+            {
+                if (c is TextBox)
+                    ((TextBox)c).Clear();
+
+                else
+                    ClearallTextbox(c);
+            }
+
+        }
+        public void clearcombo(Control con)
+        {
+            foreach (Control c in con.Controls)
+            {
+                if (c is ComboBox)
+                    ((ComboBox)c).ResetText();
+                else
+                    clearcombo(c);
+
+
+            }
+
+        }
+        public void cleardate(Control con)
+        {
+            foreach (Control c in con.Controls)
+            {
+                if (c is DateTimePicker)
+                    ((DateTimePicker)c).ResetText();
+                else
+                    cleardate(c);
+
+
+
+            }
+
+        }
+        int addrw = 0;
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            if (cbo_name.Text==""||cbo_title.Text==""||txt_adress.Text==""||txt_city.Text==""||txt_email.Text==""||txt_fax.Text==""||txt_mobile.Text==""||txt_newCustomerID.Text==""||txt_phone.Text==""||txt_spouse.Text=="") {
+
+                MessageBox.Show("The inputs are empty..");
+            }
+            else {
+                dgv_customerdetails.Rows.Add();
+                dgv_customerdetails.Rows[addrw].Cells["caltitle"].Value = cbo_title.Text;
+                dgv_customerdetails.Rows[addrw].Cells["calid"].Value = txt_newCustomerID.Text;
+                dgv_customerdetails.Rows[addrw].Cells["calname"].Value = cbo_name.Text;
+                dgv_customerdetails.Rows[addrw].Cells["calspouse"].Value = txt_spouse.Text;
+                dgv_customerdetails.Rows[addrw].Cells["caladress"].Value = txt_adress.Text;
+                dgv_customerdetails.Rows[addrw].Cells["calcity"].Value = txt_city.Text;
+                dgv_customerdetails.Rows[addrw].Cells["calbthdate"].Value = dtp_birthdate.Text;
+                dgv_customerdetails.Rows[addrw].Cells["calanniversary"].Value = dtp_anniversary.Text;
+                dgv_customerdetails.Rows[addrw].Cells["calphone"].Value = txt_phone.Text;
+                dgv_customerdetails.Rows[addrw].Cells["calmobile"].Value = txt_mobile.Text;
+                dgv_customerdetails.Rows[addrw].Cells["calfax"].Value = txt_fax.Text;
+                dgv_customerdetails.Rows[addrw].Cells["calemail"].Value = txt_email.Text;
+                addrw++;
+                //ClearallTextbox(this);
+                //clearcombo(this);
+                //cleardate(this);
+
+
+            }
         }
     }
 }

@@ -22,7 +22,6 @@ namespace Jewellery_management_system
         BLLCategory blcat = new BLLCategory();
         BLLItem blitm = new BLLItem();
         BLLPurchase blpur = new BLLPurchase();
-        BLLStock blsto = new BLLStock();
 
         private void PurchaseBook_Load(object sender, EventArgs e)
         {
@@ -73,7 +72,7 @@ namespace Jewellery_management_system
                     dt.Rows.InsertAt(dr, 0);
                     cboitemname.DataSource = dt;
                     cboitemname.DisplayMember = "item_name";
-                    cboitemname.ValueMember = "item_name";
+                    cboitemname.ValueMember = "item_id";
                 }
 
 
@@ -100,7 +99,7 @@ namespace Jewellery_management_system
             {
                 dataGridView1.Rows.Add();
                 dataGridView1.Rows[i].Cells["cdlinvoiceno"].Value = txtinvoiceno.Text;
-                dataGridView1.Rows[i].Cells["cdlsuppilername"].Value = cbosuppilername.Text;
+                dataGridView1.Rows[i].Cells["cdlsuppilername"].Value = txtsuppilerbillno.Text;
                 dataGridView1.Rows[i].Cells["cdlinvoicedate"].Value = dtpdate.Text;
                 dataGridView1.Rows[i].Cells["cdlsuppbillno"].Value = txtsuppilerbillno.Text;
                 dataGridView1.Rows[i].Cells["cdlitemcode"].Value = txtitemcode.Text;
@@ -123,9 +122,9 @@ namespace Jewellery_management_system
             }
 
         }
-        public void purchaseentry()
-        {
 
+        private void btnsave_Click(object sender, EventArgs e)
+        {
             int i = blinv.insertinvoicenodate(Convert.ToInt32(txtinvoiceno.Text), Convert.ToDateTime(dtpdate.Text));
             if (i > 0)
             {
@@ -151,85 +150,10 @@ namespace Jewellery_management_system
                     int carat = Convert.ToInt32(dataGridView1.Rows[j].Cells["cdlcarat"].Value.ToString());
                     decimal total = Convert.ToDecimal(dataGridView1.Rows[j].Cells["cdltotal"].Value.ToString());
 
-                    int k = blpur.insertintopurchase(invoice_no, invoice_date, item_category, item_name, quantity, weight, market_price, cost_price, discount, margin_percent, margin_discount, sell_price, colour, item_code, item_bar_code, supplier_bill_no, supplier_name, carat, total);
+                    int k = blpur.insertintopurchase(invoice_no, invoice_date, item_category, item_name, quantity, weight, market_price, cost_price, discount, margin_percent, margin_discount, sell_price, colour,item_code, item_bar_code, supplier_bill_no, supplier_name, carat, total);
                 }
-            }
-        }
-        private void btnsave_Click(object sender, EventArgs e)
-        {
-            DataTable dt = new DataTable();
-            dt = blsto.checkquantity(cboitemname.Text);
-            if (dt.Rows.Count == 0)
-            {
-                for (int a = 0; a < dataGridView1.Rows.Count; a++)
-                {
-                    string product_name = (dataGridView1.Rows[a].Cells["cdlitemname"].Value.ToString());
-                    int quantity = Convert.ToInt32(dataGridView1.Rows[a].Cells["cdlquantity"].Value.ToString());
-
-                    int b = blsto.addquantity(Convert.ToInt32(quantity), product_name);
-                }
-                purchaseentry();
-                purchase_by();
-                MessageBox.Show("Quantity Has been Added");
-
-            }
-            else
-            {
-                purchaseentry();
-                purchase_by();
-                stockentry();
                 MessageBox.Show("Purchase Data Has Been Save To Database");
-            }
-            
-        }
-
-        public void purchase_by()
-        {
-            for (int j = 0; j < dataGridView1.Rows.Count; j++)
-            {
-                int invoice_no = Convert.ToInt32(dataGridView1.Rows[j].Cells["cdlinvoiceno"].Value.ToString());
-                DateTime invoice_date = Convert.ToDateTime(dataGridView1.Rows[j].Cells["cdlinvoicedate"].Value.ToString());
-                string item_name = dataGridView1.Rows[j].Cells["cdlitemname"].Value.ToString();
-
-                int k = blpur.purchasetype(invoice_no, invoice_date, item_name, Convert.ToDecimal(txtpaidamount.Text), txtpurchasetype.Text, txtpurchaseby.Text);
-
-            }
-        }
-        public void stockentry()
-        {
-            for (int j = 0; j < dataGridView1.Rows.Count; j++)
-            {
-                string item_code = (dataGridView1.Rows[j].Cells["cdlitemcode"].Value.ToString());
-                string item_bar_code = dataGridView1.Rows[j].Cells["cdlitembarcode"].Value.ToString();
-                string item_name = dataGridView1.Rows[j].Cells["cdlitemname"].Value.ToString();
-                int quantity = Convert.ToInt32(dataGridView1.Rows[j].Cells["cdlquantity"].Value.ToString());
-                decimal sell_price = Convert.ToDecimal(dataGridView1.Rows[j].Cells["cdlsellprice"].Value.ToString());
-                decimal weight = Convert.ToDecimal(dataGridView1.Rows[j].Cells["cdlweight"].Value.ToString());
-            
-                
-
-                    int k = blsto.purchaseintryinstock(item_code, item_bar_code, item_name, quantity, weight, sell_price);
-                
-            }
-        }
-        public void forbarcode()
-        {
-            for (int j = 0; j < dataGridView1.Rows.Count; j++)
-            {
-                string item_code = (dataGridView1.Rows[j].Cells["cdlitemcode"].Value.ToString());
-                string item_bar_code = dataGridView1.Rows[j].Cells["cdlitembarcode"].Value.ToString();
-                string item_name = dataGridView1.Rows[j].Cells["cdlitemname"].Value.ToString();
-                decimal sell_price = Convert.ToDecimal(dataGridView1.Rows[j].Cells["cdlsellprice"].Value.ToString());
-                decimal weight = Convert.ToDecimal(dataGridView1.Rows[j].Cells["cdlweight"].Value.ToString());
-                int quantity = 1;
-                decimal stone = 1000;
-
-                int k = blsto.forbarcode(item_code, item_bar_code, item_name, weight, sell_price, quantity, stone);
             }
         }
     }
 }
-
-
-
-

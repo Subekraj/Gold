@@ -18,24 +18,21 @@ namespace BLL
         }
 
 
-        public int InsertIntoTable(int syn_no,int barcode,string category,string item,decimal cost_price, decimal sell_price, decimal mark_price,int unit,int stock, int minimum, int maximum) {
+        public int InsertIntoTable(int barcode, string category , string item, decimal sell_price, int quantity, string item_code, int weight, decimal labour_charge) {
 
             SqlParameter [] parm = new SqlParameter[]{
-
-                new SqlParameter("@syn_no",syn_no),
                 new SqlParameter("@barcode",barcode),
                 new SqlParameter("@category",category),
                 new SqlParameter("@item",item),
-                new SqlParameter("@cost_price",cost_price),
                 new SqlParameter("@sell_price",sell_price),
-                new SqlParameter("@mark_price",mark_price),
-                new SqlParameter("@unit",unit),
-                new SqlParameter("@stock",stock),
-                new SqlParameter("@minimum",minimum),
-                new SqlParameter("@maximum",maximum)
+                new SqlParameter("@quantity",quantity),
+                new SqlParameter("@item_code",item_code),
+                new SqlParameter("@weight",weight),
+                new SqlParameter("@labour_charge",labour_charge)
+
             };
 
-            return DOA.IDU("insert into item_add_update values (@syn_no,@barcode,@category,@item,@cost_price, @sell_price, @mark_price,@unit,@stock, @minimum, @maximum",parm);
+            return DOA.IDU("insert into item_add_update values(@barcode,@category,@item,@sell_price,@quantity,@item_code, @weight,@labour_charge)",parm);
 
         }
 
